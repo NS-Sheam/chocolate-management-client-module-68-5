@@ -73,9 +73,9 @@ const EditChocolate = () => {
                     <div className="input-group">
                         <select defaultValue={category} name='category' className="select select-bordered w-full">
                             <option disabled >Category</option>
-                            <option>Black Chocolate</option>
-                            <option>White Chocolate</option>
-                            <option>milk Chocolate</option>
+                            <option>Premium</option>
+                            <option>High Quality</option>
+                            <option>Low Quality</option>
                         </select>
                     </div>
                 </div>
