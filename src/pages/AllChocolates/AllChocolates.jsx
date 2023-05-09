@@ -11,8 +11,8 @@ const AllChocolates = () => {
             <Link to="/addchocolate">
                 <button className='btn btn-outline'>New Chocolates</button>
             </Link>
-            <div className="w-full my-4">
-                <table className="w-full">
+            <div className="w-full my-4 text-xs lg:text-base">
+                <table className="w-11/12 mx-auto">
                     {/* head */}
                     <thead>
                         <tr>
