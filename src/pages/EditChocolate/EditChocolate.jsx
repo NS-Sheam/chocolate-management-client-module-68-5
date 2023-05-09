@@ -15,7 +15,7 @@ const EditChocolate = () => {
         const photo = form.photo.value;
         const updatedChocolate = { name, country, category, photo };
         // console.log(updatedChocolate);
-        fetch(`http://localhost:5000/chocolates/${_id}`, {
+        fetch(`https://chocolate-house-server-ns-sheam.vercel.app/chocolates/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       {
         path: "chocolates",
         element: <AllChocolates></AllChocolates>,
-        loader: () => fetch("http://localhost:5000/chocolates")
+        loader: () => fetch("https://chocolate-house-server-ns-sheam.vercel.app/chocolates")
       },
       {
         path: "addChocolate",
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       {
         path: "/chocolates/:id",
         element: <EditChocolate></EditChocolate>,
-        loader: ({params}) => fetch(`http://localhost:5000/chocolates/${params.id}`)
+        loader: ({params}) => fetch(`https://chocolate-house-server-ns-sheam.vercel.app/chocolates/${params.id}`)
       }
     ]
   },

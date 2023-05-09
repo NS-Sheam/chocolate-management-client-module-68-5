@@ -15,7 +15,7 @@ const ChocolateTable = ({ chocolate, chocolates, setChocolates }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/chocolates/${_id}`, {
+                fetch(`https://chocolate-house-server-ns-sheam.vercel.app/chocolates/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
