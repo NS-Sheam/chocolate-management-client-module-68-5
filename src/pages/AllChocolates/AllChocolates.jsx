@@ -7,10 +7,7 @@ const AllChocolates = () => {
     const loadedChocolates = useLoaderData();
     const [chocolates, setChocolates] = useState(loadedChocolates);
     const navigation = useNavigation();
-    // console.log(loadedChocolates);
-    if ((!Array.isArray(loadedChocolates) ) || (navigation.state === "loading")){
-        return <LoadingSpinner></LoadingSpinner>
-    }
+    console.log(loadedChocolates);
     return (
         <div className='container mx-auto'>
             <h1 className='text-xl lg:text-6xl text-amber-800 text-center font-bold my-4'>All Chocolates</h1>
@@ -30,14 +27,16 @@ const AllChocolates = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {Array.isArray(chocolates)
-                        && chocolates.map(chocolate => <ChocolateTable
-                            key={chocolate._id}
-                            chocolate={chocolate}
-                            setChocolates={setChocolates}
-                            chocolates={chocolates}
-                        >
-                        </ChocolateTable>)}
+                        {chocolates
+                            ? chocolates?.map(chocolate => <ChocolateTable
+                                key={chocolate._id}
+                                chocolate={chocolate}
+                                setChocolates={setChocolates}
+                                chocolates={chocolates}
+                            >
+                            </ChocolateTable>) :
+                            <LoadingSpinner />
+                        }
                     </tbody>
                 </table>
             </div>
